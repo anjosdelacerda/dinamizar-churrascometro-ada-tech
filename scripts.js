@@ -22,11 +22,11 @@ console.log(inputTotal.value)
 
 
 const aumentarValorHomens = () =>{
-    inputHomens.value = parseInt(inputHomens.value) + 5
+    inputHomens.value = parseInt(inputHomens.value) + 1
 }
 
 const aumentarValorMulheres = () =>{
-    inputMulheres.value = parseInt(inputMulheres.value) + 3
+    inputMulheres.value = parseInt(inputMulheres.value) + 1
 }
 
 const aumentarValorCriancas = () =>{
@@ -34,14 +34,14 @@ const aumentarValorCriancas = () =>{
 }
 
 const subtrairValorHomens = () =>{
-    if(inputHomens.value >= 5){
-        inputHomens.value = parseInt(inputHomens.value) - 5
+    if(inputHomens.value >= 1){
+        inputHomens.value = parseInt(inputHomens.value) - 1
     }
 }
 
 const subtrairValorMulheres = () =>{
-    if(inputMulheres.value >= 3){
-        inputMulheres.value = parseInt(inputMulheres.value) - 3
+    if(inputMulheres.value >= 1){
+        inputMulheres.value = parseInt(inputMulheres.value) - 1
     }
 }
 
