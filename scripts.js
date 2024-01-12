@@ -3,6 +3,7 @@ console.log("script sendo executado")
 const inputHomens = document.getElementById('Homens')
 const inputMulheres = document.getElementById('Mulheres')
 const inputCrianca = document.getElementById('Crianças')
+const inputTotal = document.getElementById('TotalInput')
 
 const buttonAdicionarHomens = document.getElementById('event-group__adicionar-homens')
 const buttonAdicionarMulheres = document.getElementById('event-group__adicionar-mulheres')
@@ -12,9 +13,12 @@ const buttonSubtrairHomens = document.getElementById('event-group__subtrair-home
 const buttonSubtrairMulheres = document.getElementById('event-group__subtrair-mulheres')
 const buttonSubtrairCriancas = document.getElementById('event-group__subtrair-criancas')
 
+const buttonCalcular = document.getElementById('event-group__calcular')
 
-console.log(inputCrianca)
-console.log(buttonAdicionarCriancas)
+console.log(buttonCalcular)
+console.log(inputTotal)
+console.log(inputTotal.value)
+
 
 
 const aumentarValorHomens = () =>{
@@ -47,6 +51,13 @@ const subtrairValorCrianca = () =>{
     }
 }
 
+const calcularTotal = () =>{
+    if(parseInt(inputTotal.value )> 0){
+        inputTotal.value = 0
+    }
+    inputTotal.value = parseInt(inputTotal.value) + parseInt(inputCrianca.value) + parseInt(inputMulheres.value) + parseInt(inputHomens.value)
+
+}
 
 buttonAdicionarHomens.addEventListener('click', aumentarValorHomens)
 buttonAdicionarMulheres.addEventListener('click', aumentarValorMulheres)
@@ -55,3 +66,5 @@ buttonAdicionarCriancas.addEventListener('click', aumentarValorCriancas)
 buttonSubtrairHomens.addEventListener('click', subtrairValorHomens)
 buttonSubtrairMulheres.addEventListener('click', subtrairValorMulheres)
 buttonSubtrairCriancas.addEventListener('click', subtrairValorCrianca)
+
+buttonCalcular.addEventListener('click', calcularTotal)
